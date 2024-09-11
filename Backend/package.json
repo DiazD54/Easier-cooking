@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Easier Cooking Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Mateus Trejos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
