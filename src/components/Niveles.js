@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { tutoriales } from '../data/data';
 import '../style.css';
 
-// Función para agrupar tutoriales por nivel
 const agruparPorNivel = (tutoriales) => {
     const agrupados = {};
 

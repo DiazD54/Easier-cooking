@@ -6,7 +6,7 @@ const CategoriaDetalle = () => {
     const { categoria } = useParams();
     const tutorialesFiltrados = tutoriales.filter(tutorial => tutorial.categoria === categoria);
 
-    return (
+    return ( 
         <section>
             <h2>{categoria}</h2>
             <div className="tutoriales">
