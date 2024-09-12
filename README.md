@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+This project, developed by Daniel Diaz, Mateus Lanzoni and Juan Miguel López consists of a website with the capacity to show different types of cooking tutorials and their attributes, like a video link, ingredients used, etc. 
+And users can also create and account to store their preferences, submitting comments about the tutorials, and also the capacity to upload their own ones!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
