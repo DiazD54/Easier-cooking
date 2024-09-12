@@ -1,13 +1,10 @@
-### Getting Started with Create React App
 
-This project, developed by Daniel Diaz, Mateus Lanzoni and Juan Miguel López consists of a website with the capacity to show different types of cooking tutorials and their attributes, like a video link, ingredients used, etc. 
-And users can also create and account to store their preferences, submitting comments about the tutorials, and also the capacity to upload their own ones!
+This project, developed by Daniel Diaz, Mateus Lanzoni, and Juan Miguel López consists of a website that can show different cooking tutorials and their attributes, like a video link, ingredients used, etc. 
+Users can also create an account to store their preferences, submit comments about the tutorials, and also the capacity to upload their ones!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You will also be able to find a document(Spanish) with a better and more accurate description of this project.
 
-# Eassier COooking
-
-This project, developed by Daniel Diaz, Mateus Lanzoni and Juan Miguel López consists of a website with the capacity to show different types of cooking tutorials and their attributes, like a video link, ingredients used, etc. And users can also create and account to store their preferences, submitting comments about the tutorials, and also the capacity to upload their own ones!
+# Eassier Cooking
 
 ## Available Scripts
 
@@ -15,31 +12,16 @@ In the project directory, you can run:
 
 ### `cd Backend/Frontend`
 
-you do npm i to install dependencies, andd do the same to 'cdd Frontend'
+you do npm i to install dependencies, and do the same to 'cdd Frontend'
+so that you can run it locally
 
-
-### `npm start`
+### `npm start` to both Front and Back
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
@@ -53,30 +35,8 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You can learn more by contacting the developers Mateus Lanzoni Trejos, Juan Miguel Lopez, Daniel Diaz.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+easiercooking.com
