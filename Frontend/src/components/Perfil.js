@@ -1,32 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../style.css';
 
 const Perfil = () => {
+    const [perfil, setPerfil] = useState(null);
+
+    useEffect(() => {
+        const fetchPerfil = async () => {
+            try {
+                const response = await fetch('/api/perfil');
+                const perfil = await response.json();
+                setPerfil(perfil);
+            } catch (error) {
+                console.error('Error al obtener el perfil:', error);
+            }
+        };
+
+        fetchPerfil();
+    }, []);
+
+    if (!perfil) {
+        return <p>Cargando perfil...</p>;
+    }
+
     return (
-        <div>
-            <main>
-                <section className="perfil-section">
-                    <h2>Perfil</h2>
-                    <div className="perfil-detalles">
-                        <h3>Detalles del Usuario</h3>
-                        <p>Nombre: Juan Pérez</p>
-                        <p>Email: juan.perez@example.com</p>
-                    </div>
-                </section>
-                <section className="perfil-actividades">
-                    <h3>Actividades Recientes</h3>
-                    <ul>
-                        <li>Receta de Paella publicada el 10/10/2023</li>
-                        <li>Comentario en "Cómo hacer Tortilla" el 08/10/2023</li>
-                        <li>Receta de Gazpacho actualizada el 05/10/2023</li>
-                    </ul>
-                </section>
-                <section className="perfil-configuracion">
-                    <h3>Configuración</h3>
-                    <p>Preferencias de notificación: Activadas</p>
-                    <p>Idioma: Español</p>
-                </section>
-            </main>
+        <div className="perfil-container">
+            <h2 className="text-center my-4">Perfil del Usuario</h2>
+            <div className="perfil-card">
+                <img src={perfil.imagen} alt="Foto del Usuario" className="perfil-imagen" />
+                <div className="perfil-info">
+                    <h3>{perfil.nombre}</h3>
+                    <p><strong>Correo:</strong> {perfil.email}</p>
+                    <p><strong>Edad:</strong> {perfil.edad}</p>
+                    <p><strong>Idioma Preferido:</strong> {perfil.idioma}</p>
+                    <p><strong>Notificaciones:</strong> {perfil.notificaciones ? 'Activadas' : 'Desactivadas'}</p>
+                </div>
+            </div>
         </div>
     );
 };

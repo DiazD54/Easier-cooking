@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { tutoriales } from '../data/data';
 
 const NivelDetalle = () => {
     const { nivel } = useParams();
-    const tutorialesFiltrados = tutoriales.filter(tutorial => tutorial.nivel === nivel);
+    const [tutorialesFiltrados, setTutorialesFiltrados] = useState([]);
+
+    useEffect(() => {
+        const fetchTutoriales = async () => {
+            try {
+                const response = await fetch(`/api/tutoriales/nivel/${nivel}`);
+                const tutoriales = await response.json();
+                setTutorialesFiltrados(tutoriales);
+            } catch (error) {
+                console.error('Error al obtener los tutoriales:', error);
+            }
+        };
+
+        fetchTutoriales();
+    }, [nivel]);
 
     return (
         <section>

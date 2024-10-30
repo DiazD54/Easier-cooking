@@ -1,68 +1,43 @@
 import React from 'react';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import '../style.css';
 
 const Home = () => {
+    const tutorialesDestacados = [
+        { nombre: 'Paella', descripcion: 'Aprende a hacer una paella tradicional.', imagen: 'https://example.com/paella.jpg' },
+        { nombre: 'Pizza Casera', descripcion: 'Receta fácil para hacer pizza desde cero.', imagen: 'https://example.com/pizza.jpg' },
+        { nombre: 'Sushi en Casa', descripcion: 'Los pasos esenciales para hacer sushi.', imagen: 'https://example.com/sushi.jpg' }
+    ];
+
     return (
-        <div>
-            <main>
-                <section className="welcome">
-                    <h2>Bienvenido a Tutoriales de Cocina</h2>
-                    <p>Descubre recetas deliciosas y aprende a cocinar como un profesional.</p>
-                </section>
-                <section className="featured-tutorials">
-                    <h2>Tutoriales Destacados</h2>
-                    <div className="tutorials">
-                        <article className="tutorial">
-                            <h3>Receta de Pasta</h3>
-                            <p>Aprende a hacer una deliciosa pasta desde cero.</p>
-                        </article>
-                        <article className="tutorial">
-                            <h3>Pan Casero</h3>
-                            <p>Descubre los secretos para hacer pan casero perfecto.</p>
-                        </article>
-                        <article className="tutorial">
-                            <h3>Postres Rápidos</h3>
-                            <p>Recetas de postres que puedes hacer en menos de 30 minutos.</p>
-                        </article>
-                    </div>
-                </section>
-                <section className="recommended-tutorials">
-                    <h2>Tutoriales Recomendados de la Semana</h2>
-                    <div className="videos">
-                        <article className="video">
-                            <div className="video-placeholder">Video Placeholder 1</div>
-                            <h3>Video Tutorial 1</h3>
-                            <p>Descripción breve del video tutorial 1.</p>
-                        </article>
-                        <article className="video">
-                            <div className="video-placeholder">Video Placeholder 2</div>
-                            <h3>Video Tutorial 2</h3>
-                            <p>Descripción breve del video tutorial 2.</p>
-                        </article>
-                        <article className="video">
-                            <div className="video-placeholder">Video Placeholder 3</div>
-                            <h3>Video Tutorial 3</h3>
-                            <p>Descripción breve del video tutorial 3.</p>
-                        </article>
-                        <article className="video">
-                            <div className="video-placeholder">Video Placeholder 4</div>
-                            <h3>Video Tutorial 4</h3>
-                            <p>Descripción breve del video tutorial 4.</p>
-                        </article>
-                        <article className="video">
-                            <div className="video-placeholder">Video Placeholder 5</div>
-                            <h3>Video Tutorial 5</h3>
-                            <p>Descripción breve del video tutorial 5.</p>
-                        </article>
-                        <article className="video">
-                            <div className="video-placeholder">Video Placeholder 6</div>
-                            <h3>Video Tutorial 6</h3>
-                            <p>Descripción breve del video tutorial 6.</p>
-                        </article>
-                    </div>
-                </section>
-            </main>
-        </div>
+        <Container fluid className="home-container">
+            <h1 className="text-center my-4" style={{ color: '#e67e22' }}>Bienvenido a Easier Cooking</h1>
+            <p className="text-center mb-5" style={{ color: '#5a3e36' }}>Encuentra recetas fáciles y aprende a cocinar de una manera sencilla y divertida.</p>
+
+            <Button className="explore-btn mb-5" href="/niveles" style={{ backgroundColor: '#d35400', borderColor: '#d35400', color: '#fff' }}>Explorar Niveles de Dificultad</Button>
+
+            <h2 className="text-center my-4">Tutoriales Destacados</h2>
+            <Row className="tutoriales-destacados">
+                {tutorialesDestacados.map((tutorial, index) => (
+                    <Col md={4} className="mb-4" key={index}>
+                        <Card className="tutoriales-card" style={{ backgroundColor: '#fff3e0', borderColor: '#e67e22' }}>
+                            <Card.Img variant="top" src={tutorial.imagen} alt={tutorial.nombre} />
+                            <Card.Body>
+                                <Card.Title className="tutoriales-card-title" style={{ color: '#d35400' }}>
+                                    {tutorial.nombre}
+                                </Card.Title>
+                                <Card.Text className="tutoriales-card-text">
+                                    {tutorial.descripcion}
+                                </Card.Text>
+                                <Button variant="primary" className="mt-3" style={{ backgroundColor: '#d35400', borderColor: '#d35400', color: '#fff' }} href="#">
+                                    Ver Tutorial
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
+        </Container>
     );
 };
 

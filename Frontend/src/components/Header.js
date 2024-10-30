@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../style.css';
@@ -7,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <div className="logo">
-                <h1>Tutoriales de Cocina</h1>
+                <h1>Easier Cooking</h1>
             </div>
             <nav>
                 <ul>

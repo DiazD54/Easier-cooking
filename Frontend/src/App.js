@@ -1,4 +1,6 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Categorias from './components/Categorias';
@@ -8,7 +10,6 @@ import NivelDetalle from './components/NivelDetalle';
 import Perfil from './components/Perfil';
 import Contacto from './components/Contacto';
 import Layout from './components/Layout';
-import './style.css';
 
 const App = () => {
     return (
@@ -16,11 +17,11 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Layout><Home /></Layout>} />
                 <Route path="/categorias" element={<Layout><Categorias /></Layout>} />
-                <Route path="/categoria/:categoria" element={<Layout><CategoriaDetalle /></Layout>} />
                 <Route path="/niveles" element={<Layout><Niveles /></Layout>} />
-                <Route path="/nivel/:nivel" element={<Layout><NivelDetalle /></Layout>} />
                 <Route path="/perfil" element={<Layout><Perfil /></Layout>} />
                 <Route path="/contacto" element={<Layout><Contacto /></Layout>} />
+                <Route path="/nivel/:nivel" element={<NivelDetalle />} />
+                <Route path="/categoria/:categoria" element={<CategoriaDetalle />} />
             </Routes>
         </Router>
     );

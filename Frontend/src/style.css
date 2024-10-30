@@ -1,233 +1,205 @@
-:root {
-  --primary-color: #6b705c; /* Verde oliva oscuro */
-  --secondary-color: #ffe8d6; /* Beige claro */
-  --accent-color: #cb997e; /* Marrón claro */
-  --highlight-color: #ddbea9; /* Rosa pálido */
-  --font-family: 'Arial', sans-serif;
-  --font-size-base: 16px;
-  --font-size-small: 0.8em;
-  --background-color: #f5f5dc; /* Blanco hueso */
-  --button-background-color: #a5a58d; /* Verde oliva claro */
-  --button-hover-background-color: #b7b7a4; /* Verde oliva más claro */
-  --button-text-color: #fff; /* Color del texto del botón */
-  --nivel-text-color: #cb997e; /* Color del texto de los niveles */
-  --text-color: #6b705c; /* Color del texto general */
-}
-
-body, html {
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  color: var(--primary-color);
-  line-height: 1.6;
+/* Estilos Generales */
+body {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: var(--background-color);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #fdf3e1;
+  color: #5a3e36;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-  padding: 20px;
-}
-
-header, footer {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .logo {
-  margin-left: 20px;
-}
-
-header nav {
-  margin-right: 20px;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-}
-
-header nav ul li {
-  margin-right: 10px;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-  transition: background-color 0.3s ease;
-}
-
-header nav ul li a:hover {
-  background-color: var(--highlight-color);
-}
-
-.welcome {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.featured-tutorials, .recommended-tutorials, .categoria, .niveles-page section, .perfil-section {
-  padding: 10px; /* Ajuste para hacer las secciones más pequeñas */
-  margin: 10px 0; /* Ajuste para hacer las secciones más pequeñas */
-  background: var(--secondary-color);
+.container {
+  padding: 40px;
+  background-color: #fffaf0;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
 }
 
-.tutorials, .videos, .categorias {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.tutorial, .video, .categoria, .niveles-page section {
-  flex: 1 1 calc(33.333% - 40px); /* Ajuste para mostrar 3 elementos en una línea */
-  background-color: var(--secondary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 10px; /* Ajuste para hacer las secciones más pequeñas */
-  text-align: center;
-}
-
-.tutorial:hover, .video:hover, .categoria:hover, .niveles-page section:hover, .perfil-section:hover {
-  transform: translateY(-5px);
-  background-color: var(--highlight-color);
-}
-
-.tutorial h3, .video h3, .categoria h3, .niveles-page section h3, .perfil-section h2, .perfil-detalles h3, .perfil-actividades h3, .perfil-configuracion h3 {
-  margin-bottom: 10px;
-  color: var(--accent-color);
-}
-
-.tutorial p, .video p, .categoria p, .niveles-page section p, .perfil-detalles p, .perfil-actividades ul, .perfil-configuracion p {
+.container h2 {
+  color: #d35400;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
-.video-placeholder {
-  width: 100%;
-  height: 200px;
-  background-color: var(--highlight-color);
+/* Header Styles */
+header {
+  background-color: #d35400;
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  color: var(--primary-color);
-  font-size: var(--font-size-base);
-  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-button, .ver-mas-button {
-  padding: 0.5em 1em; /* Botones más pequeños */
-  color: var(--button-text-color);
-  background-color: var(--button-background-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: var(--font-size-small);
-  margin-top: 1em;
+.logo h1 {
+  font-size: 1.75rem;
+  margin: 0;
 }
 
-button:hover, .ver-mas-button:hover {
-  background-color: var(--button-hover-background-color);
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
 }
 
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1em;
-  background: var(--background-color);
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+nav ul li {
+  display: inline;
 }
 
-.form-group {
-  margin-bottom: 1.5em;
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  color: var(--primary-color);
+nav ul li a:hover {
+  color: #f39c12;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: var(--primary-color);
-}
-
-.form-group textarea {
-  height: 150px;
-  resize: none;
-}
-
-footer {
-  margin-top: auto;
-  width: 100%;
-}
-
-.additional-content {
-  margin-bottom: 2em;
-  color: var(--primary-color);
-}
-
-.additional-content h3 {
-  margin-bottom: 0.5em;
-  color: var(--primary-color);
-}
-
-.categoria-section, .niveles-page section {
-  margin-bottom: 1.5em;
-  color: var(--text-color); /* Asegúrate de que el color del texto sea consistente */
-  text-align: center; /* Centra el contenido del texto */
-}
-
-.categoria-section {
-  padding: 10px; /* Ajuste para hacer las secciones más pequeñas */
-  margin: 10px 0; /* Ajuste para hacer las secciones más pequeñas */
-  background: var(--secondary-color);
-  border: 1px solid var(--primary-color); /* Añade el borde igual que en niveles */
+/* Botones Generales */
+button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.2s;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+  border-color: #e67e22;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+}
+
+/* Niveles Styles */
+.niveles-container {
+  text-align: center;
+}
+
+.nivel-card {
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nivel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #d35400;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra el contenido horizontalmente */
-  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center;
+  gap: 10px;
 }
 
-.categoria-section:hover {
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #f39c12;
+  text-decoration: underline;
+}
+
+/* Categorías y Niveles List Styles */
+.categorias-list,
+.niveles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.categoria-card,
+.nivel-card {
+  background-color: #fff3e0;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-card:hover,
+.nivel-card:hover {
   transform: translateY(-5px);
-  background-color: var(--highlight-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Asegúrate de que el color del texto de cada categoría sea el mismo que el de cada nivel */
-.categoria-section h3 {
-  color: var(--nivel-text-color); /* Usa la misma variable de color que en los niveles */
+.categoria-link,
+.nivel-link {
+  color: #d35400;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.categoria-link:hover,
+.nivel-link:hover {
+  color: #e67e22;
+}
+
+/* Tarjetas de Tutoriales Destacados */
+.tutoriales-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.tutoriales-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tutoriales-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d35400;
+  margin-top: 10px;
+}
+
+.tutoriales-card-text {
+  font-size: 1rem;
+  color: #5a3e36;
+}
+
+/* Home Page Styles */
+.home-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  color: #e67e22;
+  margin-bottom: 20px;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  color: #5a3e36;
 }
