@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TutorialesModule } from './tutoriales/tutoriales.module';
+import { PerfilModule } from './perfil/perfil.module';
 import { Tutorial } from './tutoriales/tutorial.entity';
 
 @Module({
@@ -13,12 +14,10 @@ import { Tutorial } from './tutoriales/tutorial.entity';
       password: 'dollarfen54',
       database: 'tutoriales',
       entities: [Tutorial],
-      synchronize: true,
-      logging: true,
+      synchronize: false,
     }),
     TutorialesModule,
+    PerfilModule,
   ],
-  controllers: [],
-  providers: [],
 })
 export class AppModule {}
