@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TutorialesModule } from './tutoriales/tutoriales.module';
-import { PerfilModule } from './perfil/perfil.module';
+import { UserModule } from './user/user.module';
 import { Tutorial } from './tutoriales/tutorial.entity';
 
 @Module({
@@ -17,7 +17,7 @@ import { Tutorial } from './tutoriales/tutorial.entity';
       synchronize: false,
     }),
     TutorialesModule,
-    PerfilModule,
+    UserModule,
   ],
 })
 export class AppModule {}

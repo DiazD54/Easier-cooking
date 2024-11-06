@@ -10,19 +10,21 @@ import NivelDetalle from './components/NivelDetalle';
 import Perfil from './components/Perfil';
 import Contacto from './components/Contacto';
 import Layout from './components/Layout';
+import Login from './components/Login'; // Asegúrate de importar el componente Login
 
 const App = () => {
     return (
         <Router>
-            <Routes>
-                <Route path="/" element={<Layout><Home /></Layout>} />
-                <Route path="/categorias" element={<Layout><Categorias /></Layout>} />
-                <Route path="/niveles" element={<Layout><Niveles /></Layout>} />
-                <Route path="/perfil" element={<Layout><Perfil /></Layout>} />
-                <Route path="/contacto" element={<Layout><Contacto /></Layout>} />
-                <Route path="/nivel/:nivel" element={<NivelDetalle />} />
-                <Route path="/categoria/:categoria" element={<CategoriaDetalle />} />
-            </Routes>
+        <Routes>
+            <Route path="/" element={<Layout><Home /></Layout>} />
+            <Route path="/categorias" element={<Layout><Categorias /></Layout>} />
+            <Route path="/niveles" element={<Layout><Niveles /></Layout>} />
+            <Route path="/perfil" element={<Layout><Perfil /></Layout>} />
+            <Route path="/contacto" element={<Layout><Contacto /></Layout>} />
+            <Route path="/login" element={<Login />} /> 
+            <Route path="/nivel/:nivel" element={<NivelDetalle />} />
+            <Route path="/categoria/:categoria" element={<CategoriaDetalle />} />
+        </Routes>
         </Router>
     );
 };
